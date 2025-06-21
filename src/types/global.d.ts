@@ -1,8 +1,7 @@
-import { MongooseCache } from "mongoose";
+// import { MongooseCache } from "mongoose";
 
-declare global {
-	// eslint-disable-next-line no-var
-	let mongoose: MongooseCache | undefined;
-}
+// declare global {
+// 	let mongoose: MongooseCache | undefined;
+// }
 
-export {};
+// export {};
