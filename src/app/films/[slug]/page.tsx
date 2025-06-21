@@ -9,7 +9,7 @@ interface PageProps {
 	}>;
 }
 
-function page({ params }: PageProps) {
+function Page({ params }: PageProps) {
 	const resolvedParams = React.use(params);
 	return (
 		<>
@@ -20,4 +20,4 @@ function page({ params }: PageProps) {
 	);
 }
 
-export default page;
+export default Page;
