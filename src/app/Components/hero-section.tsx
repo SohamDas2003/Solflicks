@@ -117,14 +117,61 @@ export default function HeroSection() {
 		window.addEventListener("keydown", handleKeyPress);
 		return () => window.removeEventListener("keydown", handleKeyPress);
 	}, [goToNext, goToPrev]);
-
 	return (
 		<section className="relative w-full mx-auto overflow-hidden">
 			{loading && (
-				<div className="absolute inset-0 bg-gray-900 flex items-center justify-center z-50">
-					<div className="text-white text-center">
-						<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-						<p>Loading content...</p>
+				<div className="relative w-full aspect-[3/2] sm:aspect-[5/2] lg:aspect-[12/5] mt-22 bg-gray-900 animate-pulse">
+					{/* Skeleton Background */}
+					<div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800"></div>
+
+					{/* Skeleton Content Overlay */}
+					<div className="absolute bottom-4 left-10 sm:bottom-6 sm:left-12 lg:bottom-8 lg:left-60 z-10 max-w-[260px] sm:max-w-[300px] lg:max-w-md">
+						{/* Platform badge skeleton */}
+						<div className="mb-2 sm:mb-3">
+							<div className="inline-block h-6 w-20 bg-white/20 rounded-full"></div>
+						</div>
+
+						{/* Title skeleton */}
+						<div className="mb-1.5 sm:mb-2 lg:mb-3 space-y-2">
+							<div className="h-6 sm:h-7 lg:h-8 bg-white/30 rounded w-full"></div>
+							<div className="h-6 sm:h-7 lg:h-8 bg-white/30 rounded w-3/4"></div>
+						</div>
+
+						{/* Subtitle skeleton */}
+						<div className="h-4 sm:h-5 lg:h-6 bg-white/20 rounded w-2/3 mb-1 sm:mb-1.5 lg:mb-2"></div>
+
+						{/* Description skeleton */}
+						<div className="mb-3 sm:mb-4 lg:mb-6 space-y-1.5">
+							<div className="h-3 sm:h-4 lg:h-5 bg-white/20 rounded w-full"></div>
+							<div className="h-3 sm:h-4 lg:h-5 bg-white/20 rounded w-5/6"></div>
+							<div className="h-3 sm:h-4 lg:h-5 bg-white/20 rounded w-4/5"></div>
+						</div>
+
+						{/* Buttons skeleton */}
+						<div className="flex gap-2 sm:gap-2.5 lg:gap-3">
+							<div className="h-8 sm:h-9 lg:h-10 w-24 sm:w-28 lg:w-32 bg-white/40 rounded-full"></div>
+							<div className="h-8 sm:h-9 lg:h-10 w-20 sm:w-24 lg:w-28 bg-white/20 rounded-full border border-white/30"></div>
+						</div>
+					</div>
+
+					{/* Navigation arrows skeleton */}
+					<div className="absolute left-1 sm:left-2 lg:left-4 top-1/2 -translate-y-1/2 z-20">
+						<div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/10 rounded-full"></div>
+					</div>
+					<div className="absolute right-1 sm:right-2 lg:right-4 top-1/2 -translate-y-1/2 z-20">
+						<div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/10 rounded-full"></div>
+					</div>
+
+					{/* Indicators skeleton */}
+					<div className="absolute bottom-1.5 right-3 sm:bottom-2 sm:right-4 lg:bottom-4 lg:right-8 flex items-center space-x-1 sm:space-x-1.5 lg:space-x-2 z-20">
+						<div className="h-1 sm:h-1.5 lg:h-2 w-5 sm:w-6 lg:w-8 bg-white/40 rounded-full"></div>
+						<div className="h-1 sm:h-1.5 lg:h-2 w-1 sm:w-1.5 lg:w-2 bg-white/20 rounded-full"></div>
+						<div className="h-1 sm:h-1.5 lg:h-2 w-1 sm:w-1.5 lg:w-2 bg-white/20 rounded-full"></div>
+					</div>
+
+					{/* Progress bar skeleton */}
+					<div className="absolute bottom-0 left-0 w-full h-1 bg-white/20 z-10">
+						<div className="h-full bg-white/40 w-1/3 animate-pulse"></div>
 					</div>
 				</div>
 			)}{" "}
@@ -142,7 +189,7 @@ export default function HeroSection() {
 			{/* Carousel Container - Only show if there are slides */}
 			{!loading && slides.length > 0 && (
 				<>
-					<div className="relative w-full aspect-[3/2] sm:aspect-[5/2] md:aspect-[12/5] lg:aspect-[12/5] mt-22">
+					<div className="relative w-full aspect-[3/2] sm:aspect-[5/2] lg:aspect-[12/5] mt-22">
 						{/* Background Images */}
 						<div className="absolute inset-0 w-full h-full">
 							<div className="relative w-full h-full overflow-hidden">
@@ -162,7 +209,7 @@ export default function HeroSection() {
 												alt={slide.title}
 												fill
 												priority={index === 0}
-												className="object-cover object-center"
+												className=""
 											/>
 										) : (
 											// Fallback background if no image
