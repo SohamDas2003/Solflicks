@@ -46,13 +46,20 @@ function AllFilms() {
 
 	const filmsToShow = films.slice(0, displayedFilms);
 	const hasMoreFilms = displayedFilms < films.length;
-
 	if (loading) {
 		return (
 			<section className="w-full bg-[#f9f9f9] py-16 md:py-16">
 				<div className="max-w-7xl mx-auto px-4 xl:px-0">
-					<div className="flex justify-center items-center min-h-[400px]">
-						<div className="text-xl text-gray-600">Loading films...</div>
+					<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6">
+						{[...Array(12)].map((_, index) => (
+							<div
+								key={index}
+								className="film-card flex flex-col lg:mb-[30px]">
+								<div className="relative w-full aspect-[3/4] mb-[15px] overflow-hidden bg-gray-200 animate-pulse rounded"></div>
+								<div className="h-6 bg-gray-200 animate-pulse mb-2 rounded w-4/5"></div>
+								<div className="h-5 bg-gray-200 animate-pulse rounded w-1/3"></div>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>

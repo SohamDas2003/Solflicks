@@ -116,7 +116,7 @@ function AllBlogs() {
 				<section className="relative w-full h-[700px] overflow-hidden mt-22">
 					{/* Background Skeleton */}
 					<div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
-					
+
 					{/* Dark gradient overlay skeleton */}
 					<div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
 
