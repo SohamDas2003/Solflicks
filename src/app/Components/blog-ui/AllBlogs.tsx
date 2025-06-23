@@ -109,31 +109,57 @@ function AllBlogs() {
 
 	const blogsToShow = blogs.slice(0, displayedBlogs);
 	const hasMoreBlogs = displayedBlogs < blogs.length;
-
 	if (loading) {
 		return (
-			<section className="bg-[#FAF7EF] py-16">
-				<div className="max-w-7xl mx-auto px-4 lg:px-0 py-8">
-					<h1 className="text-[45px] font-[500] leading-[123%] tracking-[0.02em] font-clash mb-8">
-						Recent Blog Post
-					</h1>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{[...Array(3)].map((_, index) => (
-							<div
-								key={index}
-								className="flex flex-col bg-white overflow-hidden shadow-sm">
-								<div className="relative h-56 w-full bg-gray-200 animate-pulse"></div>
-								<div className="p-6">
-									<div className="h-6 bg-gray-200 animate-pulse mb-3 rounded"></div>
-									<div className="h-4 bg-gray-200 animate-pulse mb-2 rounded"></div>
-									<div className="h-4 bg-gray-200 animate-pulse mb-4 rounded w-3/4"></div>
-									<div className="h-4 bg-gray-200 animate-pulse rounded w-20"></div>
-								</div>
-							</div>
-						))}
+			<>
+				{/* Banner Skeleton */}
+				<section className="relative w-full h-[700px] overflow-hidden mt-22">
+					{/* Background Skeleton */}
+					<div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
+					
+					{/* Dark gradient overlay skeleton */}
+					<div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+
+					{/* Content Container Skeleton */}
+					<div className="relative h-full max-w-7xl mx-auto px-4 xl:px-0 flex flex-col justify-end pb-16">
+						<div className="max-w-2xl">
+							{/* Title skeleton */}
+							<div className="h-10 md:h-12 bg-gray-500/30 rounded mb-4 animate-pulse w-4/5"></div>
+							{/* Description skeleton */}
+							<div className="h-5 bg-gray-500/30 rounded mb-2 animate-pulse w-3/4"></div>
+							<div className="h-5 bg-gray-500/30 rounded mb-6 animate-pulse w-1/2"></div>
+						</div>
+						{/* Arrow skeleton */}
+						<div className="absolute right-8 bottom-36">
+							<div className="bg-gray-500/30 w-16 h-16 rounded animate-pulse"></div>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+
+				{/* Blog Cards Skeleton */}
+				<section className="bg-[#FAF7EF] py-16">
+					<div className="max-w-7xl mx-auto px-4 lg:px-0 py-8">
+						<h1 className="text-[45px] font-[500] leading-[123%] tracking-[0.02em] font-clash mb-8">
+							Recent Blog Post
+						</h1>
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+							{[...Array(6)].map((_, index) => (
+								<div
+									key={index}
+									className="flex flex-col bg-white overflow-hidden shadow-sm">
+									<div className="relative h-56 w-full bg-gray-200 animate-pulse"></div>
+									<div className="p-6">
+										<div className="h-6 bg-gray-200 animate-pulse mb-3 rounded"></div>
+										<div className="h-4 bg-gray-200 animate-pulse mb-2 rounded"></div>
+										<div className="h-4 bg-gray-200 animate-pulse mb-4 rounded w-3/4"></div>
+										<div className="h-4 bg-gray-200 animate-pulse rounded w-20"></div>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+				</section>
+			</>
 		);
 	}
 
