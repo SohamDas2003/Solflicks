@@ -91,7 +91,7 @@ export default function BlogSlugPage() {
 	return (
 		<div className="bg-[#faf7ef] min-h-screen">
 			{/* Dynamic Featured Banner */}
-			<section className="relative w-full h-[700px] overflow-hidden mt-22">
+			<section className="relative w-full h-[600px] overflow-hidden mt-22">
 				{/* Background Image */}
 				<div className="absolute inset-0">
 					<Image

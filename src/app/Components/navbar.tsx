@@ -155,9 +155,9 @@ export function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-6">
-            <button className="text-white transition-transform hover:scale-110">
+            {/* <button className="text-white transition-transform hover:scale-110">
               <Search size={24} />
-            </button>
+            </button> */}
             <div className="gsap-nav-button">
               <TicketButton label="Contact" href="/contact" />
             </div>
@@ -207,9 +207,9 @@ export function Navbar() {
             <div className="flex flex-col space-y-5">
 
               <div className="flex justify-between items-center">
-                <button className="text-white p-3 rounded-full bg-white/5 hover:bg-white/10 transition-all">
+                {/* <button className="text-white p-3 rounded-full bg-white/5 hover:bg-white/10 transition-all">
                   <Search size={22} />
-                </button>
+                </button> */}
                 <div className="scale-110">
                   <TicketButton label="Contact" href="/contact" />
                 </div>
