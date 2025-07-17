@@ -82,7 +82,7 @@ const ShowItem = ({
 };
 
 function FeaturedShow() {
-	const [activeTab, setActiveTab] = useState("Films");
+const [activeTab, setActiveTab] = useState("Series");
 	const [films, setFilms] = useState<Film[]>([]);
 	const [series, setSeries] = useState<Series[]>([]);
 	const [loading, setLoading] = useState(true);
@@ -198,28 +198,28 @@ function FeaturedShow() {
 					<h2 className="font-clash text-3xl md:text-4xl lg:text-[55px] font-semibold text-white capitalize leading-none tracking-[0.02em] mb-8">
 						Featured Shows
 					</h2>
-					<div className="flex space-x-0 mb-6">
-						<button
-							className={`px-6 py-2 font-jakarta font-medium md:text-[26px] leading-[123%] tracking-[2%] relative transition-colors duration-300 ${
-								activeTab === "Films" ? "bg-white text-black" : "text-white"
-							}`}
-							onClick={() => handleTabChange("Films")}>
-							Films
-							{activeTab === "Films" && (
-								<div className="absolute bottom-0 left-0 w-full h-1 bg-white"></div>
-							)}
-						</button>
-						<button
-							className={`px-6 py-2 font-jakarta font-medium md:text-[26px] leading-[123%] tracking-[2%] relative transition-colors duration-300 ${
-								activeTab === "Series" ? "bg-white text-black" : "text-white"
-							}`}
-							onClick={() => handleTabChange("Series")}>
-							Series
-							{activeTab === "Series" && (
-								<div className="absolute bottom-0 left-0 w-full h-1 bg-white"></div>
-							)}
-						</button>
-					</div>
+			   <div className="flex space-x-0 mb-6">
+				   <button
+					   className={`px-6 py-2 font-jakarta font-medium md:text-[26px] leading-[123%] tracking-[2%] relative transition-colors duration-300 ${
+						   activeTab === "Series" ? "bg-white text-black" : "text-white"
+					   }`}
+					   onClick={() => handleTabChange("Series")}> 
+					   Series
+					   {activeTab === "Series" && (
+						   <div className="absolute bottom-0 left-0 w-full h-1 bg-white"></div>
+					   )}
+				   </button>
+				   <button
+					   className={`px-6 py-2 font-jakarta font-medium md:text-[26px] leading-[123%] tracking-[2%] relative transition-colors duration-300 ${
+						   activeTab === "Films" ? "bg-white text-black" : "text-white"
+					   }`}
+					   onClick={() => handleTabChange("Films")}> 
+					   Films
+					   {activeTab === "Films" && (
+						   <div className="absolute bottom-0 left-0 w-full h-1 bg-white"></div>
+					   )}
+				   </button>
+			   </div>
 					<div className="border-b border-[#FAF7EF] opacity-100"></div>
 				</div>
 
