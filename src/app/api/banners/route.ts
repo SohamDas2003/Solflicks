@@ -4,15 +4,14 @@ import mongoose from "mongoose";
 
 // Connect to MongoDB
 async function connectDB() {
-	if (mongoose.connections[0].readyState) {
-		return;
-	}
-
-	try {
-		await mongoose.connect(process.env.MONGODB_URI as string);
-	} catch (error) {
-		console.error("MongoDB connection error:", error);
-		throw new Error("Failed to connect to database");
+	// Only skip if connection is fully established
+	if (mongoose.connections[0].readyState !== 1) {
+		try {
+			await mongoose.connect(process.env.MONGODB_URI as string);
+		} catch (error) {
+			console.error("MongoDB connection error:", error);
+			throw new Error("Failed to connect to database");
+		}
 	}
 }
 

@@ -132,9 +132,14 @@ function ContactUs() {
 												height={18}
 											/>
 										</div>
-										<p className="font-jakarta font-[400] text-[18px] leading-[100%] text-[#C9C9C9]">
-											+91 9820129600 / +91 9167307450
-										</p>
+										<div className="flex flex-col gap-0">
+											<span className="font-jakarta font-[400] text-[18px] leading-[100%] text-[#C9C9C9] mb-2">
+												+91 9820129600
+											</span>
+											<span className="font-jakarta font-[400] text-[18px] leading-[100%] text-[#C9C9C9]">
+												+91 9167307450
+											</span>
+										</div>
 									</div>
 
 									{/* Email */}
@@ -170,9 +175,14 @@ function ContactUs() {
 												height={17}
 											/>
 										</div>
-										<p className="font-jakarta font-[400] text-[18px] leading-[100%] text-[#C9C9C9]">
-											F-304, Serenity Complex, Andheri West, 400102
-										</p>
+										<div className="flex flex-col">
+											<span className="font-jakarta font-[400] text-[18px] leading-[100%] text-[#C9C9C9] mb-2">
+												F-304, Serenity Complex,
+											</span>
+											<span className="font-jakarta font-[400] text-[18px] leading-[100%] text-[#C9C9C9]">
+												Andheri West, 400102
+											</span>
+										</div>
 									</div>
 								</div>
 							</div>

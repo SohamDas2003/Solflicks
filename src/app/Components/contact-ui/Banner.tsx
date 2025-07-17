@@ -18,9 +18,9 @@ function Banner({ children }: { children: React.ReactNode }) {
         {/* Banner Content */}
         <div className="absolute inset-0 max-w-7xl mx-auto px-4 xl:px-0 flex flex-col justify-center items-start">
           <div className="w-full max-w-xl mb-[170px] sm:mb-[155px]">
-            <h1 className="font-clash font-[600] text-[55px] leading-[130%] tracking-[0.02em] text-white mb-3">
+            {/* <h1 className="font-clash font-[600] text-[55px] leading-[130%] tracking-[0.02em] text-white mb-3">
               Contact Us
-            </h1>
+            </h1> */}
           </div>
         </div>
       </div>

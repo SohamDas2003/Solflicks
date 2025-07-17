@@ -160,10 +160,10 @@ function Footer() {
 									F-304, Serenity Complex, Andheri West, 400102
 								</span>
 							</li>
-							<li className="flex items-start flex-col sm:flex-row sm:items-center">
+							<li className="flex items-center">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									className="h-6 w-6 mr-2 text-white flex-shrink-0 mt-1 sm:mt-0"
+									className="h-6 w-6 mr-2 text-white flex-shrink-0"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"

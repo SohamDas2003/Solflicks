@@ -52,7 +52,7 @@ function VideoSection() {
                     </div>
                 ) : (
                     <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
+                        src="https://www.youtube.com/embed/cjlEOZM4EgU?autoplay=1&rel=0"
                         title="SolFlicks Showreel"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen

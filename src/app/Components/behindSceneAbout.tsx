@@ -123,10 +123,10 @@ function BehindSceneAbout() {
 							/>
 						</svg>
 					</button>{" "}
-					<div
-						ref={scrollContainerRef}
-						className="flex w-max md:w-full overflow-x-auto scrollbar-hide"
-						style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+			<div
+				ref={scrollContainerRef}
+				className="flex w-full md:w-max overflow-x-auto scrollbar-hide"
+				style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
 						{slides.map((slide, index) => (
 							<div
 								key={slide.id}
