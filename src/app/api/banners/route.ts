@@ -7,7 +7,8 @@ async function connectDB() {
 	// Only skip if connection is fully established
 	if (mongoose.connections[0].readyState !== 1) {
 		try {
-			await mongoose.connect(process.env.MONGODB_URI as string);
+				 await mongoose.connect(process.env.NEXT_PUBLIC_MongoDB_URI as string);
+				 await mongoose.connection.asPromise();
 		} catch (error) {
 			console.error("MongoDB connection error:", error);
 			throw new Error("Failed to connect to database");
