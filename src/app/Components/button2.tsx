@@ -14,7 +14,7 @@ interface TicketButtonProps {
 export default function TicketButton2({
   label,
   href,
-  className = "",
+  className = "cursor-pointer",
   rightContent
 }: TicketButtonProps) {
   const router = useRouter();

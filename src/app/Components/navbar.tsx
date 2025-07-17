@@ -13,7 +13,6 @@ const navItems = [
   { name: "Series", href: "/series" },
   { name: "Behind the Scene", href: "/behind-the-scene" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {

@@ -2,6 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import TicketButton from "./contact-button";
+import TicketButton2 from "./button2";
 
 function BehindSceneAbout() {
 	const [isMobile, setIsMobile] = useState(false);
@@ -79,7 +80,7 @@ function BehindSceneAbout() {
 					</p>
 					<TicketButton
 						label="View All"
-						href="#"
+						href="/behind-the-scene"
 					/>
 				</div>{" "}
 				{/* Image Cards */}
